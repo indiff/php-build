@@ -133,6 +133,7 @@ jobs:
           set -ex
           ./install-dependencies.sh
           git clone --depth 1 https://github.com/sstephenson/bats.git
+          mkdir -p /opt/php
           ./bats/install.sh /opt/php
       # - name: run tests
       #   run: |
