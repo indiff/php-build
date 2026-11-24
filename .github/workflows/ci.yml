@@ -220,3 +220,5 @@ jobs:
           tar -zcvf "${TARBALL}" "${BASE_FOLDER}"
           NOTES="$(printf "|prefix|$TAGNAME|\n|:--:|:--:|\n| php| ${{ matrix.php }}|\n ")"
           gh release create "$TAGNAME" --target "main" --notes "${NOTES}" --title "$NAME" "${TARBALL}"
+        env:
+           GITHUB_TOKEN: ${{ github.token }}
