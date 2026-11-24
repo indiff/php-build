@@ -5,7 +5,7 @@ set -e
 DIR=$(dirname "$0")
 
 if [ -z "$PREFIX" ]; then
-    PREFIX="/usr/local"
+    PREFIX="/opt/php"
 fi
 
 echo "Installing php-build in '$PREFIX'"
